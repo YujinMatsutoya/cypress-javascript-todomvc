@@ -1,0 +1,23 @@
+{
+  "name": "cypress-javascript-todomvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YujinMatsutoya/cypress-javascript-todomvc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YujinMatsutoya/cypress-javascript-todomvc/issues"
+  },
+  "homepage": "https://github.com/YujinMatsutoya/cypress-javascript-todomvc#readme",
+  "dependencies": {
+    "cypress": "^3.8.3"
+  }
+}
