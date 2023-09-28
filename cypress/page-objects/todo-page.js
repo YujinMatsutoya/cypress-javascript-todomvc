@@ -7,9 +7,9 @@ export class TodoPage {
         todoText: (todoIndex) => cy.get('.todo-list li:nth-child(' + (todoIndex + 1) + ') label'),
         todoToggle: (todoIndex) => cy.get('.todo-list li:nth-child(' + (todoIndex + 1) + ') input'),
         todoDelete: (todoIndex) => cy.get('.todo-list li:nth-child(' + (todoIndex + 1) + ') .destroy'),
-        allFilter: (todoIndex) => cy.get('.filters li:nth-child(1) a'),
-        activeFilter: (todoIndex) => cy.get('.filters li:nth-child(2) a'),
-        completedFilter: (todoIndex) => cy.get('.filters li:nth-child(3) a'),
+        allFilter: () => cy.get('.filters li:nth-child(1) a'),
+        activeFilter: () => cy.get('.filters li:nth-child(2) a'),
+        completedFilter: () => cy.get('.filters li:nth-child(3) a'),
         todoCount: () => cy.get('footer .todo-count strong'),
         todoClear: () => cy.get('footer .clear-completed') 
     }
