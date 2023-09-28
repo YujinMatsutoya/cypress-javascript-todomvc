@@ -1,15 +1,17 @@
+/// <reference types="cypress" />
+
 export class TodoPage {
     
     elements = {
         newTodoInput: () => cy.get('.new-todo'),
         todoList: () => cy.get('ul.todo-list'),
         todoListItem: () => cy.get('ul.todo-list li'),
-        todoText: (todoIndex) => cy.get('.todo-list li:nth-child(' + (todoIndex + 1) + ') label'),
-        todoToggle: (todoIndex) => cy.get('.todo-list li:nth-child(' + (todoIndex + 1) + ') input'),
-        todoDelete: (todoIndex) => cy.get('.todo-list li:nth-child(' + (todoIndex + 1) + ') .destroy'),
-        allFilter: () => cy.get('.filters li:nth-child(1) a'),
-        activeFilter: () => cy.get('.filters li:nth-child(2) a'),
-        completedFilter: () => cy.get('.filters li:nth-child(3) a'),
+        todoText: (todoIndex) => cy.get('ul li label').eq(todoIndex),
+        todoToggle: (todoIndex) => cy.get('ul li input').eq(todoIndex),
+        todoDelete: (todoIndex) => cy.get('ul .destroy').eq(todoIndex),
+        allFilter: () => cy.get('footer .filters li a').eq(0),
+        activeFilter: () => cy.get('footer .filters li a').eq(1),
+        completedFilter: () => cy.get('footer .filters li a').eq(2),
         todoCount: () => cy.get('footer .todo-count strong'),
         todoClear: () => cy.get('footer .clear-completed') 
     }

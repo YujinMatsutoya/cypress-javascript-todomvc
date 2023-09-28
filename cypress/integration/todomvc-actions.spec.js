@@ -11,7 +11,7 @@ describe('todo actions', () => {
         todoPage.addTodo('item number 1')
     })
 
-    it('Verify a new todo is added to the list', () => {
+    it.only('Verify a new todo is added to the list', () => {
         todoPage.elements.todoText(0).should('contain.text', 'number')
         todoPage.elements.todoToggle(0).should('not.be.checked')
     })
